@@ -1,58 +1,250 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>Xiaotian Xu's Personal Webpage</title>
-        <link rel="stylesheet" type="text/css" href="index_personal.css">
-    </head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<TITLE>Home Page for Xiaotian Xu</title>
+<style>
+    @media screen and (max-width: 600px){
+        #header{
+            width:auto;
+            height:auto;
+            float:none;
+        }
+        #showplace{
+            width:auto;
+            height:auto;
+        }
+        #ul1 {
+            font-size:20px;
+        }
+    }
+    @media screen and (min-width: 600px){
+        #header{
+            width:98%;
+        }
+        
+        #showplace{
+            width:97.7%;
+        }
+        #ul1{
+            font-size:24px;
+        }
+    }
+    body{
+        font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+        position: relative;
+        margin-left: 0;
+        min-width: 600px;
+        background: #42A5F5;
+    }
+    #header{
+        position: relative;
+        background: #3F51B5;
+        margin-top: -10px;
+        padding: 20px; 
+        height: 100px;   
+        box-shadow: 1px 1px 5px grey;
+    }
+    #showplace{
+        position: relative;
+        margin-top: 3px;
+        background: #42A5F5;
+        border: 2px solid #42A5F5;
+        padding: 20px; 
+        height: 74%;   
+    }
+    a:link{
+        text-decoration: none;
+        color:#E8EAF6;
+    }
+    a:visited{
+        text-decoration: none;
+        color:#E8EAF6;
+    }
+    a:hover{
+        text-decoration: none;
+        color:#FFFFFF;
+    }
+    a:active{
+        text-decoration: none;
+        color:#E8EAF6;
+    }
+    #welcome{
+        font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+        color: #E8EAF6;
+        margin-top: 0px;
+    }
+    #ul1{
+        text-align:left;
+        margin: 0;
+        margin-top:25px;
+        padding:0;
+        color:#E8EAF6;
+    }
+    .li1{
+        display: inline;
+    }
+    #tran1{
+        margin-left: -22px;
+        margin-top: -30px;
+        width: 135px;
+        height: 45px;
+        background: #3F51B5;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        box-shadow: 0px 0px 5px grey;
+    }
+    #tran1:hover{
+        width: 250px;
+    }
+    #tran2{
+        margin-left: -22px;
+        margin-top:-24px;
+        width: 135px;
+        height: 45px;
+        background: #3F51B5;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        box-shadow: 0px 0px 5px grey;
+    }
+    #tran2:hover{
+        width: 250px;
+    }
+    #tran3{
+        margin-left: -22px;
+        margin-top: -24px;
+        width: 135px;
+        height: 45px;
+        background: #3F51B5;
+        -webkit-transition: width 2s; 
+        transition: width 2s;
+        box-shadow: 0px 0px 5px grey;
+    }
+    #tran3:hover{
+        width: 250px;
+    }
+    #tran4{
+        margin-left: -22px;
+        margin-top: -24px;
+        width: 135px;
+        height: 45px;
+        background: #3F51B5;
+        -webkit-transition: width 2s; 
+        transition: width 2s;
+        box-shadow: 0px 0px 5px grey;
+    }
+    #tran4:hover{
+        width: 250px;
+    }
+    #tran5{
+        margin-left: -22px;
+        margin-top: -24px;
+        width: 135px;
+        height: 45px;
+        background: #3F51B5;
+        -webkit-transition: width 2s; 
+        transition: width 2s;
+        box-shadow: 0px 0px 5px grey;
+    }
+    #tran5:hover{
+        width: 250px;
+    }
+    #section{
+        margin-left: 250px;
+        margin-top: -250px;
+        width:1030px;
+        color:#1A237E;
+    }
+    .bars{
+        font-size: 25px;
+        text-align: center;  
+        color: #FFFFFF;
+    }
+</style>
+    
+<script type="text/javascript">
+    
+var curIndex=0;
+var timeInterval=10000; 
+var arr=new Array();
+arr[0]="DSC_0358.png";
+arr[1]="DSC_0415.png";
+arr[2]="DSC_0575.png";
+arr[3]="DSC_0617.png";
+arr[4]="DSC_0625.png";
+setInterval(changeImg,timeInterval);
+
+function changeImg()
+{
+    var obj=document.getElementById("obj");
+    if (curIndex==arr.length-1) 
+    {
+        curIndex=0;
+    }
+    else
+    {
+        curIndex+=1;
+    }
+    obj.src=arr[curIndex];
+}
+    function smy(){
+        var sp=document.getElementById("section");
+        sp.innerHTML="<br><table border=\"0\" style=\"border-spacing:10px;font-size:20px;text-align:justify;font-weight:bold;color:#1A237E;\"><tr><td rowspan=\"4\"><img src=\"myphoto.jpg\"><td style=\"font-size:30px;\">Xiaotian Xu<tr><td>Graduate Student, University of Southern California<tr><td>Summary: Xiaotian Xu is a master student in Electrical Engineering, specializing in computer networks and wireless communications with solid knowledge and coursework experience of network protocols, such as TCP/IP, UDP, DHCP, routing protocols, Ethernet, and IEEE 802.11; good understanding of key technologies in LTE, such as OFDM, MU-MIMO.<tr><td>Object: Looking for a full-time position working as Network Engineer or Software Engineer starting in summer/fall 2016.</tr></table>"; 
+    }  
+    function edu(){
+        var sp=document.getElementById("section");
+        sp.innerHTML="<pre style=\"font-size:20px;text-align:justify;font-weight:bold;color:#1A237E;font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;\">M.S., Electrical Engineering                                                                                                    GPA: 3.89/4.0<br>University of Southern California, Los Angeles, CA, USA                                      Aug. 2014-present<br>Major Courses: Wireless Networks, Mobile Communications, Algorithm Design,<br>                             Web Technologies, Introduction of Computer Networks<br><br>B.Eng., Communication Engineering                                                                                     GPA: 4.10/5.0<br>Nanjing University of Posts and Telecommunications, Nanjing, China            Aug. 2010-Jun. 2014</pre>"; 
+    }
+    function photowall(){
+        var sp=document.getElementById("section");
+        sp.innerHTML="<br>Under Construction..."; 
+    }
+    function con(){
+        var sp=document.getElementById("section");
+        sp.innerHTML="<p style=\"font-size:20px;font-weight:bold;color:#1A237E;\">Address: 1246 W 30th St, Apt 107, Los Angeles, CA, 90007<br>Phone: 213-550-6369<br>E-mail: xiaotian@usc.edu or chrisxiaotianxu@gmail.com<br>WeChat: xiaotianxu1004<br>"; 
+    }
+    function awd(){
+        var sp=document.getElementById("section");
+        sp.innerHTML="<br><table border=\"0\" style=\"border-spacing:20px;font-size:20px;text-align:justify;font-weight:bold;color:#1A237E;\"><tr><td>University-level Scholarship for Academic Achievements at NUPT<td>2011, 2012, 2013<tr><td>Honorable Mention, Mathematical Contest in Modeling (MCM) 2013<td>Feb. 1-5 2013<tr><td>First Prize, 16th Imagine Cup of NUPT<td>Nov. 2013</table>";
+    }
+    function pro(){
+        var sp=document.getElementById("section");
+        sp.innerHTML="<h2>Academic Projects</h2><ul style=\"font-size:17.2px;text-align:justifyfont-weight:bold;\"><li>Joint Scheduling and Power Allocation over Independent Channels<ol><li>Designed a heuristic algorithm to schedule a set of independent wireless communication channels with known channel state information for the goal of balancing the total transmit power and throughput.</li><li>Used Matlab to implement and optimize this algorithm so that it has faster running speed and higher accuracy.</li><li>This algorithm shows better performance in several test cases with large input size than some algorithms designed by others.</li></ol><li>Online Appointment System Based on TCP/UDP Socket Programming<ol><li>Built an online appointment system for health center with a hybrid architecture of TCP and bidirectional UDP sockets.</li><li>Programmed in C to realize multithread communications between a health center server and multiple clients.</li></ol><li>Crime Busting Model Based on Dynamic Ranking Algorithm<ol><li>Designed a network data mining model based on semantic analysis, node contraction, and dynamic programming, which can recognize the hidden crime network behind bigger social networks.</li><li>Simulated the model in Matlab, tested it by social networks of different sizes, and promoted it to general networks.</li><li>Published a research paper in Abstract and Applied Analysis, Volume 2013.</li></ol><li>Parking Lots Management System<ol><li>Programmed in Java to build a multi-module parking lots management system which can record the car\'s information, calculate parking fees, and update the number of remaining parking lots.</li><li>Designed a user-friendly GUI for the management system.</li></ul>";
+    }
+</script>
+</head>
+    
 <body>
-    <div id="main">
-        <div id="header">
-            <img src="header.png"></img>
-        </div>
-        <div id="footer">
-            <img src="footer.png"></img>	
-        </div>
-        <div id="section">
-            <h1 id="head1">Xiaotian Xu</h1>
-            <h2>Today's headlines</h2>
-            <h3 id="sub1">Mozilla adds every version of Flash to default Firefox<br>blocklist</h3>
-            <p>Firefox users awoke Wednesday to an update that blocks every version of Adobe's 
-                Flash<br>Player from running in the popular open-source browser, a victory for 
-			    information security<br>efforts following the unprecedented disclosure of numerous 
-			    critical Flash vulnerabilities.</p>
-            <h3 id="sub2">Talks with major networks for Apple streaming TV<br>service making rapid progress - report</h3>
-            <p>After being mired for months, talks with major networks regarding an Apple streaming
-                TV<br>service are finally making major advancements ahead of an anticipated launch 
-			    this fall,<br>according to a new report.</p>
-            <ul id="ul1">
-                <li class="li1"><a href="hw3_file2.html#home">Home</a>&nbsp;|</li>
-                <li class="li1"><a href="hw3_file2.html#reviews">Reviews</a>&nbsp;|</li>
-                <li class="li1"><a href="hw3_file2.html#deals">Deals</a>&nbsp;|</li>
-                <li class="li1"><a href="hw3_file2.html#followus">Follow Us</a>&nbsp;|</li>
-                <li class="li1"><a href="hw3_file2.html#tipus">Tip Us</a>&nbsp;|</li>
-                <li class="li1"><a href="hw3_file2.html#contactus">Contact Us</a></li>
-            </ul>
-        </div>
+<div id="header">
+    <h1 id="welcome">Welcome to Xiaotian's Homepage~</h1>
+    <ul id="ul1">
+                <li class="li1"><a href="javascript:location.reload()">Home</a>&nbsp;</li>
+                <li class="li1"><a href="javascript:void(0)" onclick="smy()">Resume</a>&nbsp;</li>
+                <li class="li1"><a href="javascript:void(0)" onclick="photowall()">Albums</a>&nbsp;</li>
+                <li class="li1"><a href="javascript:void(0)" onclick="photowall()">Life</a>&nbsp;</li>
+                <li class="li1"><a href="javascript:void(0)" onclick="con()">Contact</a>&nbsp;</li>
+    </ul>
+</div>
+<div id="showplace">
+    <div id="tran1">
+        <p class="bars"><a href="javascript:void(0)" onclick="smy()">Summary</a></p>
     </div>
-    <div id="menu">
-        <div id="sideheader">
-            <img src="side_top.png"></img>
-        </div>
-        <div id="sidefooter">
-            <img src="side_bottom.png"></img>
-        </div>
-        <div id="section2">
-            <h1 id="head2">Menu</h1>
-            <ul id="ul2">
-                <li class="li2">Home</li>
-                <li class="li2">Education</li>
-                <li class="li2">Skills</li>
-                <li class="li2">Projects</li>
-                <li class="li2">Awards</li>
-                <li class="li2">Hobbies</li>
-            </ul>
-        </div>
+    <div id="tran2">
+        <p class="bars"><a href="javascript:void(0)" onclick="edu()">Education</a></p>
     </div>
+    <div id="tran3">
+        <p class="bars"><a href="javascript:void(0)" onclick="pro()">Projects</a></p>
+    </div>
+    <div id="tran4">
+        <p class="bars"><a href="javascript:void(0)" onclick="awd()">Awards</a></p>
+    </div>
+    <div id="tran5">
+        <p class="bars"><a href="javascript:void(0)" onclick="con()">Contact Me</a></p>
+    </div>
+    <div id="section" >
+        <br>
+        <img id=obj src="DSC_0358.png" width=782 height=520 border=0>
+    </div>
+</div>
 <noscript>
 </body>
 </html>
