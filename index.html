@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <TITLE>Home Page for Xiaotian Xu</title>
 <style>
     @media only screen and (max-width: 460px){
@@ -9,16 +9,27 @@
         }
         #header{
             height: 21%;
+            margin-top: -2%;
         }
         #showplace{
-            width:70%;
+            display:none;
         }
         #section{
             float:left;
-            width:40%;
+            width:97%;
+            margin-left: 1.5%;
         }
         #obj{
+            width:427px;
+            height:284px;
+        }
+        #myphoto{
             display:none;
+        }
+        #quick{
+            display:inline;
+            margin-left: 6%;
+            font-size: 1.3em;
         }
         
     }
@@ -46,6 +57,7 @@
         }
         #header{
             height: 18%;
+            margin-top: -1%;
         }
         #showplace{
             width:20%;
@@ -58,6 +70,9 @@
             margin-left: 2%;
             width:750px;
             height:500px;
+        }
+        #quick{
+            display:none;
         }
     }
     
@@ -78,7 +93,7 @@
     #header{
         position:relative;
         background: #3F51B5;
-        margin-top: -1%;
+        
         padding: 1.3%;
         border:0;   
         box-shadow: 1px 1px 5px grey;
@@ -194,7 +209,6 @@
     }
     #section{
         position:relative;
-        color:#1A237E;
     }
     .bars{
         font-size: 1.4em;
@@ -228,64 +242,123 @@ function changeImg()
     }
     obj.src=arr[curIndex];
 }
-    function smy(){
-        var sp=document.getElementById("section");
-        sp.innerHTML="<br><table border=\"0\" style=\"border-spacing:10px;font-size:20px;text-align:justify;font-weight:bold;color:#1A237E;\"><tr><td rowspan=\"4\"><img src=\"myphoto.png\"><td style=\"font-size:30px;\">Xiaotian Xu<tr><td>Graduate Student, University of Southern California<tr><td>Summary: Xiaotian Xu is a master student in Electrical Engineering, specializing in computer networks and wireless communications with solid knowledge and coursework experience of network protocols, such as TCP/IP, UDP, DHCP, routing protocols, Ethernet, and IEEE 802.11; good understanding of key technologies in LTE, such as OFDM, MU-MIMO.<tr><td>Object: Looking for a full-time position working as Network Engineer or Software Engineer starting in summer/fall 2016.</tr></table>"; 
-    }  
-    function edu(){
-        var sp=document.getElementById("section");
-        sp.innerHTML="<pre style=\"font-size:20px;text-align:justify;font-weight:bold;color:#1A237E;font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;\">M.S., Electrical Engineering                                                                                                    GPA: 3.89/4.0<br>University of Southern California, Los Angeles, CA, USA                                      Aug. 2014-present<br>Major Courses: Wireless Networks, Mobile Communications, Algorithm Design,<br>                             Web Technologies, Introduction of Computer Networks<br><br>B.Eng., Communication Engineering                                                                                     GPA: 4.10/5.0<br>Nanjing University of Posts and Telecommunications, Nanjing, China            Aug. 2010-Jun. 2014</pre>"; 
+
+    function dis(ty){
+        var a1=document.getElementById("obj");
+        var a2=document.getElementById("summ");
+        var a3=document.getElementById("eduu");
+        var a4=document.getElementById("proj");
+        var a5=document.getElementById("awar");
+        var a6=document.getElementById("cott");
+        var a7=document.getElementById("unf");
+        var a=[a1,a2,a3,a4,a5,a6,a7];
+        for (var i=0;i<a.length;i++){
+            if (i==ty){
+                a[i].setAttribute("style", "display:inline;");
+            }else{
+                a[i].setAttribute("style", "display:none;");
+            }
+        }
     }
-    function photowall(){
-        var sp=document.getElementById("section");
-        sp.innerHTML="<br>Under Construction..."; 
-    }
-    function con(){
-        var sp=document.getElementById("section");
-        sp.innerHTML="<p style=\"font-size:20px;font-weight:bold;color:#1A237E;\">Address: 1246 W 30th St, Apt 107, Los Angeles, CA, 90007<br>Phone: 213-550-6369<br>E-mail: xiaotian@usc.edu or chrisxiaotianxu@gmail.com<br>WeChat: xiaotianxu1004<br>"; 
-    }
-    function awd(){
-        var sp=document.getElementById("section");
-        sp.innerHTML="<br><table border=\"0\" style=\"border-spacing:20px;font-size:20px;text-align:justify;font-weight:bold;color:#1A237E;\"><tr><td>University-level Scholarship for Academic Achievements at NUPT<td>2011, 2012, 2013<tr><td>Honorable Mention, Mathematical Contest in Modeling (MCM) 2013<td>Feb. 1-5 2013<tr><td>First Prize, 16th Imagine Cup of NUPT<td>Nov. 2013</table>";
-    }
-    function pro(){
-        var sp=document.getElementById("section");
-        sp.innerHTML="<h2>Academic Projects</h2><ul style=\"font-size:17.2px;text-align:justifyfont-weight:bold;\"><li>Joint Scheduling and Power Allocation over Independent Channels<ol><li>Designed a heuristic algorithm to schedule a set of independent wireless communication channels with known channel state information for the goal of balancing the total transmit power and throughput.</li><li>Used Matlab to implement and optimize this algorithm so that it has faster running speed and higher accuracy.</li><li>This algorithm shows better performance in several test cases with large input size than some algorithms designed by others.</li></ol><li>Online Appointment System Based on TCP/UDP Socket Programming<ol><li>Built an online appointment system for health center with a hybrid architecture of TCP and bidirectional UDP sockets.</li><li>Programmed in C to realize multithread communications between a health center server and multiple clients.</li></ol><li>Crime Busting Model Based on Dynamic Ranking Algorithm<ol><li>Designed a network data mining model based on semantic analysis, node contraction, and dynamic programming, which can recognize the hidden crime network behind bigger social networks.</li><li>Simulated the model in Matlab, tested it by social networks of different sizes, and promoted it to general networks.</li><li>Published a research paper in Abstract and Applied Analysis, Volume 2013.</li></ol><li>Parking Lots Management System<ol><li>Programmed in Java to build a multi-module parking lots management system which can record the car\'s information, calculate parking fees, and update the number of remaining parking lots.</li><li>Designed a user-friendly GUI for the management system.</li></ul>";
-    }
+    
 </script>
 </head>
     
 <body>
+    
 <div id="header">
     <h1 id="welcome">Welcome to Xiaotian's Homepage~</h1>
     <ul id="ul1">
                 <li class="li1"><a href="javascript:location.reload()">Home</a>&nbsp;</li>
-                <li class="li1"><a href="javascript:void(0)" onclick="smy()">Resume</a>&nbsp;</li>
-                <li class="li1"><a href="javascript:void(0)" onclick="photowall()">Albums</a>&nbsp;</li>
-                <li class="li1"><a href="javascript:void(0)" onclick="photowall()">Life</a>&nbsp;</li>
-                <li class="li1"><a href="javascript:void(0)" onclick="con()">Contact</a>&nbsp;</li>
+                <li class="li1"><a href="javascript:void(0)" onclick="dis(1)">Resume</a>&nbsp;</li>
+                <li class="li1"><a href="javascript:void(0)" onclick="dis(6)">Albums</a>&nbsp;</li>
+                <li class="li1"><a href="javascript:void(0)" onclick="dis(6)">Life</a>&nbsp;</li>
+                <li class="li1"><a href="javascript:void(0)" onclick="dis(5)">Contact</a>&nbsp;</li>
     </ul>
 </div>
 <div id="showplace">
     <div id="tran1">
-        <p class="bars"><a href="javascript:void(0)" onclick="smy()">Summary</a></p>
+        <p class="bars"><a href="javascript:void(0)" onclick="dis(1)">Summary</a></p>
     </div>
     <div id="tran2">
-        <p class="bars"><a href="javascript:void(0)" onclick="edu()">Education</a></p>
+        <p class="bars"><a href="javascript:void(0)" onclick="dis(2)">Education</a></p>
     </div>
     <div id="tran3">
-        <p class="bars"><a href="javascript:void(0)" onclick="pro()">Projects</a></p>
+        <p class="bars"><a href="javascript:void(0)" onclick="dis(3)">Projects</a></p>
     </div>
     <div id="tran4">
-        <p class="bars"><a href="javascript:void(0)" onclick="awd()">Awards</a></p>
+        <p class="bars"><a href="javascript:void(0)" onclick="dis(4)">Awards</a></p>
     </div>
     <div id="tran5">
-        <p class="bars"><a href="javascript:void(0)" onclick="con()">Contact Me</a></p>
+        <p class="bars"><a href="javascript:void(0)" onclick="dis(5)">Contact Me</a></p>
     </div>
 </div>
     <div id="section" >
         <br>
         <img id="obj" src="DSC_0358.png">
+        <div id="summ" style="display:none;">
+        <table border=0 style="border-spacing:10px;font-size:20px;text-align:justify;font-weight:bold;">
+            <tr>
+                <td rowspan="4"><img id="myphoto" src="myphoto.png">
+                <td style="font-size:30px;">Xiaotian Xu
+            <tr><td>Graduate Student, University of Southern California
+            <tr><td>Summary: Xiaotian Xu is a master student in Electrical Engineering, specializing in computer networks and wireless communications with solid knowledge and coursework experience of network protocols, such as TCP/IP, UDP, DHCP, routing protocols, Ethernet, and IEEE 802.11; good understanding of key technologies in LTE, such as OFDM, MU-MIMO.
+            <tr><td>Object: Looking for a full-time position working as Network Engineer or Software Engineer starting in summer/fall 2016.        
+        </table>
+        </div>
+        <div id="eduu" style="display:none;">
+        <table style="font-size:17.2px;text-align:left;font-weight:bold;font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;">
+            <tr><td>M.S., Electrical Engineering<td>GPA: 3.89/4.0
+            <tr><td>University of Southern California, Los Angeles, CA, USA<td>Aug. 2014-present
+            <tr><td>Major Courses: Wireless Networks, Mobile Communications, Algorithm Design, Web Technologies, Introduction of Computer Networks<td>
+            <tr><td>B.Eng., Communication Engineering<td>GPA: 4.10/5.0
+            <tr><td>Nanjing University of Posts and Telecommunications, Nanjing, China<td>Aug. 2010-Jun. 2014
+        </table>
+        </div>
+        <div id="proj" style="display:none;">
+            <h2>Academic Projects</h2>
+            <ul style="font-size:17.2px;text-align:justify;font-weight:bold;">
+                <li>Joint Scheduling and Power Allocation over Independent Channels
+                    <ol><li>Designed a heuristic algorithm to schedule a set of independent wireless communication channels with known channel state information for the goal of balancing the total transmit power and throughput.</li>
+                        <li>Used Matlab to implement and optimize this algorithm so that it has faster running speed and higher accuracy.</li>
+                        <li>This algorithm shows better performance in several test cases with large input size than some algorithms designed by others.</li>
+                    </ol>
+                <li>Online Appointment System Based on TCP/UDP Socket Programming
+                    <ol><li>Built an online appointment system for health center with a hybrid architecture of TCP and bidirectional UDP sockets.</li>
+                        <li>Programmed in C to realize multithread communications between a health center server and multiple clients.</li>
+                    </ol>
+                <li>Crime Busting Model Based on Dynamic Ranking Algorithm
+                    <ol><li>Designed a network data mining model based on semantic analysis, node contraction, and dynamic programming, which can recognize the hidden crime network behind bigger social networks.</li>
+                        <li>Simulated the model in Matlab, tested it by social networks of different sizes, and promoted it to general networks.</li>
+                        <li>Published a research paper in Abstract and Applied Analysis, Volume 2013.</li>
+                    </ol>
+                <li>Parking Lots Management System
+                    <ol><li>Programmed in Java to build a multi-module parking lots management system which can record the car\'s information, calculate parking fees, and update the number of remaining parking lots.</li>
+                        <li>Designed a user-friendly GUI for the management system.</li>
+            </ul>
+        </div>
+        <div id="awar" style="display:none;">
+        <table border=0 style="border-spacing:20px;font-size:17.2px;text-align:justify;font-weight:bold;">
+            <tr><td>University-level Scholarship for Academic Achievements at NUPT<td>2011, 2012, 2013
+            <tr><td>Honorable Mention, Mathematical Contest in Modeling (MCM) 2013<td>Feb. 1-5 2013
+            <tr><td>First Prize, 16th Imagine Cup of NUPT<td>Nov. 2013</table>
+        </div>
+        <div id="quick">
+            <a href="javascript:void(0)" onclick="dis(1)">Summary&nbsp;</a>
+            <a href="javascript:void(0)" onclick="dis(2)">Education&nbsp;</a> 
+            <a href="javascript:void(0)" onclick="dis(3)">Projects&nbsp;</a>
+            <a href="javascript:void(0)" onclick="dis(4)">Awards&nbsp;</a>
+            <br>
+        </div>
+        <div id="cott" style="display:none;">
+        <p style="font-size:17.2px;font-weight:bold;">
+            Address: 1246 W 30th St, Apt 107, Los Angeles, CA, 90007<br>
+            Phone: 213-550-6369<br>
+            E-mail: xiaotian@usc.edu or chrisxiaotianxu@gmail.com<br>
+            WeChat: xiaotianxu1004<br>
+        </p> 
+        </div>
+        <p id="unf" style="display:none;">Under Construction...
     </div>
 
 <noscript>
