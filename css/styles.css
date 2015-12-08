@@ -1,0 +1,45 @@
+body{
+    font-family: "Sanchez",serif;
+    background-color: #EEEEEE;
+}
+#mainDiv{
+    margin-top: 80px;
+}
+#myName{
+    font-size: 25px;
+}
+hr{
+    border-color: gray;
+    margin-top: 1px;
+}
+#myPhoto{
+    padding-left:30px;
+    padding-right:30px;
+}
+@media screen and (max-width:768px){
+    #myPhoto{
+        display: none;
+    }
+}
+.panel-group{
+    margin-bottom: 15px;
+}
+.panels{
+    margin-bottom: 0;
+}
+.table{
+    margin-bottom: 0;
+}
+#main2{
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.edu{
+    font-size: 14px;
+}
+.headers{
+    margin-top: 45px;
+}
+#exp{
+    margin-bottom: 40px;
+}
